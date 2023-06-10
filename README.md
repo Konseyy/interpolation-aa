@@ -1,3 +1,4 @@
+Uzdevums 3a
 Programma izveidota valodā Rust
 Repozitorija pieejama https://github.com/Konseyy/interpolation-aa
 
