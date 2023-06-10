@@ -4,19 +4,6 @@ use colors_transform::{Color, Rgb};
 use image::{DynamicImage, GenericImageView, Rgba};
 use std::fs;
 use std::path::Path;
-#[derive(Clone)]
-struct Point {
-    x: u32,
-    y: u32,
-    r: u8,
-    g: u8,
-    b: u8,
-}
-struct ImgInfo {
-    width: u32,
-    height: u32,
-    points: Vec<Point>,
-}
 fn process_image(input_path: &str) -> Option<(u32, u32, DynamicImage)> {
     let img = image::open(&Path::new(input_path));
     if img.is_err() {
@@ -24,7 +11,6 @@ fn process_image(input_path: &str) -> Option<(u32, u32, DynamicImage)> {
         return None;
     }
 
-    let mut points: Vec<Point> = Vec::new();
     let width = img.as_ref().unwrap().width();
     let height = img.as_ref().unwrap().height();
 
