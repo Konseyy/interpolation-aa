@@ -51,7 +51,7 @@ fn main() {
     }
     let mut passes_input = String::new();
     let interpolation_passes: i16;
-    print!("Please enter contrast value (from 1 to 32): ");
+    print!("Please enter interpolation pass count (from 1 to 32): ");
     let _ = stdout().flush();
     stdin()
         .read_line(&mut passes_input)
